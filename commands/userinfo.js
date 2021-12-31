@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const {  MessageEmbed  } = require('discord.js')
-const color = "#ffed47"
+const color = process.env.COLOR
 
 module.exports = {
 	data: new SlashCommandBuilder()
