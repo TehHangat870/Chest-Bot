@@ -1,6 +1,6 @@
 // Required Classes
 const { Client, Intents, MessageEmbed, Collection} = require('discord.js')
-const token = process.env.TOKEN
+const { token } = required('/config.json')
 const fs = require('fs');
 
 

@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const {  MessageEmbed  } = require('discord.js')
-const color = process.env.COLOR
+const { color } = required('/config.json')
 
 module.exports = {
 	data: new SlashCommandBuilder()
