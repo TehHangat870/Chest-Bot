@@ -1,6 +1,3 @@
-// Keep Alive
-const keep_alive = require('./keep_alive.js')
-
 // Required Classes
 const { Client, Intents, MessageEmbed, Collection} = require('discord.js')
 const { token } = require('./config.json');
