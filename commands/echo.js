@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, SlashCommandStringOption } = require('@discordjs/builders');
 const {  MessageEmbed  } = require('discord.js')
-const { color } = require('./config.json')
+const { color } = require('./config.json');
 
 module.exports = {
 	data: new SlashCommandBuilder()
