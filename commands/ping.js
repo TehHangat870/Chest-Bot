@@ -5,7 +5,7 @@ const { color } = require('./config.json');
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('ping')
-		.setDescription('Replies with the info of the latency!'),
+		.setDescription('Replies with Pong!'),
 	async execute(interaction) {
 		const serverInfo = new MessageEmbed()
 		.setColor(color)
