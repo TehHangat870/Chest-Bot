@@ -21,7 +21,7 @@ for (const file of commandFiles) {
 
 // Telling if client is ready
 client.once("ready", () => {
-	console.log("Client has logged to Discord!");
+	console.log(client.user.tag + " has logged to Discord!");
 });
 
 
