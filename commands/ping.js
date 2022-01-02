@@ -10,7 +10,7 @@ module.exports = {
 		const serverInfo = new MessageEmbed()
 		.setColor(color)
 		.setTitle("Pong! 🏓")
-		.setDescription("API Latency is "+ Math.round(client.ws.ping) +" ms.")
+		// .setDescription()
 		await interaction.reply({ embeds: [serverInfo] })
 	},
 };
