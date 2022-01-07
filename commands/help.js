@@ -12,6 +12,7 @@ module.exports = {
 				.setRequired(false)),
 	async execute(interaction) {
 		const commandname = interaction.options.getString("commandname")
+        console.log(commandname);
         if (commandname === "calculator"){
             const helpMessage = new MessageEmbed()
             .setTitle("calculator")
@@ -75,13 +76,13 @@ module.exports = {
                 { name: 'Usage', value:  "`/randominteger <required minimal> <required maximal>`", inline: false }
             ) 
             await interaction.reply({embeds : [helpMessage]})
-        } else if (commandname === "randominteger"){
+        } else if (commandname === "readnote"){
             const helpMessage = new MessageEmbed()
             .setTitle("readnote")
 		    .setColor(color)
             .addFields(
-                { name: 'Description', value: "Replies with where to report problems in the bot!", inline: false },
-                { name: 'Usage', value:  "`/report`", inline: false }
+                { name: 'Description', value: "Access the note that you made. (if there is any)", inline: false },
+                { name: 'Usage', value:  "`/readnote`", inline: false }
             ) 
             await interaction.reply({embeds : [helpMessage]})
         } else if (commandname === "serverinfo"){
@@ -110,7 +111,7 @@ module.exports = {
             .addFields(
                 { name: 'Note Commands', value: "`/note <note>`\n`/readnote`\n`/deletenote`", inline: false },
                 { name: 'Information Commands', value:  "`/report`\n`/serverinfo`\n`/userinfo <target>`", inline: false },
-                { name: 'Fun Commands', value:  "`/echo <input>`\n`/random <minimal> <maximal>`\n`/calculator <question>`", inline: false }
+                { name: 'Fun Commands', value:  "`/echo <input>`\n`/randominteger <minimal> <maximal>`\n`/calculator <question>`", inline: false }
             )
 	    	await interaction.reply({embeds : [helpMessage]})
         }
