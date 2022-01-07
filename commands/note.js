@@ -6,7 +6,7 @@ var fs = require('fs');
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('note')
-		.setDescription('Makes a note that you can access any time')
+		.setDescription('Makes a note that you can access any time the bot is online.')
 		.addStringOption(option =>
 			option.setName('text')
 				.setDescription('The text you want to note!')
