@@ -105,7 +105,7 @@ module.exports = {
             await interaction.reply({embeds : [helpMessage]})
         } else if (commandname === "report"){
             const helpMessage = new MessageEmbed()
-            .setTitle("randominteger")
+            .setTitle("report")
 		    .setColor(color)
             .addFields(
                 { name: 'Description', value: "Replies with a where to report problems in the bot!", inline: false },
