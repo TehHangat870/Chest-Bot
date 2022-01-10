@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, SlashCommandStringOption } = require('@discordjs/builders');
-const {  MessageEmbed  } = require('discord.js')
+const { MessageActionRow, MessageEmbed, MessageSelectMenu } = require('discord.js');
 const { color } = require('./config.json');
 
 module.exports = {
@@ -94,13 +94,22 @@ module.exports = {
                 { name: 'Usage', value:  "`/serverinfo`", inline: false }
             ) 
             await interaction.reply({embeds : [helpMessage]})
-        } else if (commandname === "randominteger"){
+        } else if (commandname === "userinfo"){
             const helpMessage = new MessageEmbed()
             .setTitle("userinfo")
 		    .setColor(color)
             .addFields(
                 { name: 'Description', value: "Replies with the userinfo of the target!", inline: false },
                 { name: 'Usage', value:  "`/userinfo <required target>`", inline: false }
+            ) 
+            await interaction.reply({embeds : [helpMessage]})
+        } else if (commandname === "report"){
+            const helpMessage = new MessageEmbed()
+            .setTitle("randominteger")
+		    .setColor(color)
+            .addFields(
+                { name: 'Description', value: "Replies with a where to report problems in the bot!", inline: false },
+                { name: 'Usage', value:  "`/report`", inline: false }
             ) 
             await interaction.reply({embeds : [helpMessage]})
         } else {

@@ -37,7 +37,7 @@ client.on('interactionCreate', async interaction => {
 		await command.execute(interaction);
 	} catch (error) {
 		console.error(error);
-		await interaction.reply({ content : "An error accured, please try again or contact the developers by using */report*.", ephemeral : true });
+		await interaction.reply({content : "An error accured, please try again or contact the developers by using */report*.", ephemeral : true});
 	}
 });
 
